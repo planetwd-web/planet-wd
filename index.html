@@ -12,7 +12,25 @@
 </head>
 
 <body>
+<div id="ageModal" class="age-modal">
+  <div class="age-box">
+    <h1>+18 ONLY</h1>
 
+    <p>
+      Debes ser mayor de edad para acceder a este sitio.
+    </p>
+
+    <div class="buttons">
+      <button onclick="enterSite()" class="yes-btn">
+        SOY MAYOR
+      </button>
+
+      <button onclick="leaveSite()" class="no-btn">
+        SALIR
+      </button>
+    </div>
+  </div>
+</div>
 <!-- HEADER -->
 <header>
   <h1>PLANET <span>WD</span></h1>
@@ -29,7 +47,7 @@
   <div class="hero-text">
     <h2>OTRO NIVEL</h2>
     <p>Otra experiencia</p>
-    <a href="#productos" class="btn">Comprar ahora</a>
+    <a href="#productos" class="btn">Contactanos</a>
   </div>
 </section>
 
@@ -107,6 +125,14 @@
       img.style.opacity = "1";
     }
   });
+
+  function enterSite() {
+  document.getElementById("ageModal").style.display = "none";
+}
+
+function leaveSite() {
+  window.location.href = "https://google.com";
+}
 </script>
 </body>
 </html>
