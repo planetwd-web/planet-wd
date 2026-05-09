@@ -334,21 +334,28 @@ footer{
 .no-btn{
   padding:14px 28px;
   border-radius:12px;
-  border:2px solid #7fff00;
-  background:transparent;
-  color:#7fff00;
+  border:2px solid #7fff00 !important;
+  background:#111 !important;
+  color:#7fff00 !important;
+
   font-family:'Orbitron', sans-serif;
+  font-size:16px;
   cursor:pointer;
-  transition:0.3s;
+
+  transition:0.3s ease;
 
   box-shadow:
-    0 0 10px #7fff00;
+    0 0 10px #7fff00,
+    inset 0 0 10px #7fff00;
+
+  appearance:none;
+  -webkit-appearance:none;
 }
 
 .yes-btn:hover,
 .no-btn:hover{
-  background:#7fff00;
-  color:#000;
+  background:#7fff00 !important;
+  color:#000 !important;
 
   box-shadow:
     0 0 20px #7fff00,
