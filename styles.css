@@ -1,0 +1,276 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Rajdhani', sans-serif;
+  background:#000;
+  color:#fff;
+}
+
+/* HEADER */
+header{
+  position:fixed;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  z-index:1000;
+}
+
+header h1{
+  font-family:'Orbitron', sans-serif;
+  letter-spacing:4px;
+}
+
+header span{
+  color:#7fff00;
+  text-shadow:0 0 10px #7fff00;
+}
+
+nav a{
+  margin-left:20px;
+  color:white;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background:url('/img/logo.jpg') center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+
+.overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.8);
+}
+
+.hero-text{
+  position:relative;
+  text-align:center;
+}
+
+.hero h2{
+  font-family:'Orbitron';
+  font-size:60px;
+  color:#7fff00;
+  text-shadow:0 0 20px #7fff00;
+}
+
+.hero p{
+  margin:20px 0;
+  font-size:20px;
+}
+
+.btn{
+  padding:12px 30px;
+  border:1px solid #7fff00;
+  color:#7fff00;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#7fff00;
+  color:#000;
+}
+
+/* PRODUCTOS */
+.productos{
+  padding:100px 40px;
+  text-align:center;
+}
+
+.productos h2{
+  font-family:'Orbitron';
+  color:#7fff00;
+  margin-bottom:40px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#111;
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.3s;
+  box-shadow:0 0 15px #7fff0020;
+}
+
+.card:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px #7fff00;
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card h3{
+  font-family:'Orbitron';
+  margin:15px 0;
+}
+
+.card p{
+  color:#aaa;
+  padding-bottom:20px;
+}
+
+/* CONTACTO */
+.contacto{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.contacto h2{
+  font-family:'Orbitron';
+  color:#7fff00;
+}
+
+.social{
+  margin:30px 0;
+}
+
+.btn-social{
+  display:inline-block;
+  margin:10px;
+  padding:10px 25px;
+  border:1px solid #7fff00;
+  color:#7fff00;
+  text-decoration:none;
+}
+
+.btn-social:hover{
+  background:#7fff00;
+  color:#000;
+}
+
+.numero{
+  font-size:20px;
+  margin-top:20px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  background:#000;
+  color:#777;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .hero h2{
+    font-size:35px;
+  }
+
+  header{
+    padding:15px 20px;
+  }
+
+}
+
+.hero-bg{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  top:0;
+  left:0;
+  z-index:0;
+  opacity:1;
+  transition:opacity 0.6s ease;
+}
+
+/* Para que el texto esté arriba */
+.hero-text{
+  position:relative;
+  z-index:2;
+}
+
+.overlay{
+  z-index:1;
+}
+
+.logo-contacto{
+  display:flex;
+  justify-content:center;
+  margin:30px 0;
+}
+
+.logo-contacto img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+
+  /* efecto premium */
+  box-shadow: 
+    0 0 20px #7fff00,
+    0 0 40px #7fff00,
+    inset 0 0 20px #7fff00;
+
+  border:2px solid #7fff00;
+
+  transition:0.3s;
+}
+
+.logo-contacto img:hover{
+  transform:scale(1.1);
+  box-shadow: 
+    0 0 30px #7fff00,
+    0 0 60px #7fff00;
+}
+
+.icon{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  width:60px;
+  height:60px;
+  margin:10px;
+  border-radius:50%;
+  border:2px solid #7fff00;
+  color:#7fff00;
+  font-size:24px;
+  text-decoration:none;
+
+  box-shadow:
+    0 0 10px #7fff00,
+    0 0 20px #7fff00;
+
+  transition:0.3s;
+}
+
+.icon:hover{
+  background:#7fff00;
+  color:#000;
+
+  box-shadow:
+    0 0 20px #7fff00,
+    0 0 40px #7fff00;
+
+  transform:scale(1.1);
+}
+
+.card-link{
+  text-decoration:none;
+  color:inherit;
+}

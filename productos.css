@@ -1,0 +1,142 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* BODY */
+body{
+  font-family: 'Rajdhani', sans-serif;
+  background:#000;
+  color:#fff;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:center;
+  padding:20px;
+  background:#000;
+  border-bottom:1px solid #7fff00;
+}
+h3{
+  text-align:center;
+}
+h4{
+  text-align:center;
+}
+header h1{
+  font-family:'Orbitron';
+  letter-spacing:5px;
+}
+
+header span{
+  color:#7fff00;
+  text-shadow:0 0 10px #7fff00;
+}
+
+/* TITULOS */
+h2{
+  text-align:center;
+  margin:40px 0;
+  font-family:'Orbitron';
+  color:#7fff00;
+  text-shadow:0 0 10px #7fff00;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:25px;
+  padding:0 30px 50px;
+}
+
+/* CARDS */
+.card{
+  background:#111;
+  border-radius:15px;
+  padding:20px;
+  text-align:center;
+
+  border:1px solid #7fff0020;
+
+  box-shadow:
+    0 0 10px #7fff0020;
+
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:
+    0 0 20px #7fff00,
+    0 0 40px #7fff00;
+}
+
+/* TITULO PRODUCTO */
+.card h3{
+  font-family:'Orbitron';
+  margin-bottom:10px;
+}
+
+/* PRECIO */
+.card p{
+  color:#7fff00;
+  font-size:18px;
+  font-weight:bold;
+  text-shadow:0 0 10px #7fff00;
+}
+
+/* BOTON VOLVER */
+.btn{
+  display:block;
+  width:200px;
+  margin:20px auto 50px;
+  text-align:center;
+  padding:12px;
+
+  border:1px solid #7fff00;
+  color:#7fff00;
+  text-decoration:none;
+
+  box-shadow:0 0 10px #7fff00;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#7fff00;
+  color:#000;
+}
+
+/* LINKS CARD */
+.card-link{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  h2{
+    font-size:22px;
+  }
+h3{
+  text-align:center;
+}
+h4{
+  text-align:center;
+}
+}
+.card img{
+  width:100%;        /* ocupa el ancho de la card */
+  height:200px;      /* altura fija */
+  object-fit:cover;  /* recorta sin deformar */
+  border-radius:10px;
+  margin-bottom:10px;
+}
